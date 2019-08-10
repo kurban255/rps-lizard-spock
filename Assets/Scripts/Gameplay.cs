@@ -23,23 +23,21 @@ public class Gameplay : MonoBehaviour
     string[] pick = { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
     int lives;
     int score;
-
-    int rock = 0;
-    int paper = 1;
-    int scissors = 2;
-    int lizard = 3;
-    int spock = 4;
-
-    string scissorsCutsPaper = "Scissors cuts Paper";
-    string paperCoversRock = "Paper covers Rock";
-    string rockCrushesLizard = "Rock crushes Lizard";
-    string lizardPoisonsSpock = "Lizard poisons Spock";
-    string spockSmashesScissors = "Spock smashes Scissors";
-    string scissorsDecapitatesLizard = "Scissors decapitates Lizard";
-    string lizardEatsPaper = "Lizard eats Paper";
-    string paperDisprovesSpock = "Paper disproves Spock";
-    string spockVaporizesRock = "Spock vaporizes Rock";
-    string rockCrushesScissors = "Rock crushes Scissors";
+    readonly int rock = 0;
+    readonly int paper = 1;
+    readonly int scissors = 2;
+    readonly int lizard = 3;
+    readonly int spock = 4;
+    readonly string scissorsCutsPaper = "Scissors cuts Paper";
+    readonly string paperCoversRock = "Paper covers Rock";
+    readonly string rockCrushesLizard = "Rock crushes Lizard";
+    readonly string lizardPoisonsSpock = "Lizard poisons Spock";
+    readonly string spockSmashesScissors = "Spock smashes Scissors";
+    readonly string scissorsDecapitatesLizard = "Scissors decapitates Lizard";
+    readonly string lizardEatsPaper = "Lizard eats Paper";
+    readonly string paperDisprovesSpock = "Paper disproves Spock";
+    readonly string spockVaporizesRock = "Spock vaporizes Rock";
+    readonly string rockCrushesScissors = "Rock crushes Scissors";
 
     // Cached component references
 
