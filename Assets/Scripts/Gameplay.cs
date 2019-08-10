@@ -24,8 +24,25 @@ public class Gameplay : MonoBehaviour
     int lives;
     int score;
 
+    int rock = 0;
+    int paper = 1;
+    int scissors = 2;
+    int lizard = 3;
+    int spock = 4;
+
+    string scissorsCutsPaper = "Scissors cuts Paper";
+    string paperCoversRock = "Paper covers Rock";
+    string rockCrushesLizard = "Rock crushes Lizard";
+    string lizardPoisonsSpock = "Lizard poisons Spock";
+    string spockSmashesScissors = "Spock smashes Scissors";
+    string scissorsDecapitatesLizard = "Scissors decapitates Lizard";
+    string lizardEatsPaper = "Lizard eats Paper";
+    string paperDisprovesSpock = "Paper disproves Spock";
+    string spockVaporizesRock = "Spock vaporizes Rock";
+    string rockCrushesScissors = "Rock crushes Scissors";
+
     // Cached component references
-    
+
 
     public void Start()
     {
@@ -38,27 +55,27 @@ public class Gameplay : MonoBehaviour
 
     public void OnPressRock()
     {
-        PlayGame(0, 2, 3, 1, 4, "Rock crushes Scissors", "Rock crushes Lizard", "Paper covers Rock", "Spock vaporizes Rock");
+        PlayGame(rock, scissors, lizard, paper, spock, rockCrushesScissors, rockCrushesLizard, paperCoversRock, spockVaporizesRock);
     }
 
     public void OnPressPaper()
     {
-        PlayGame(1, 0, 4, 2, 3, "Paper covers Rock", "Paper disproves Spock", "Scissors cuts Paper", "Lizard eats Paper");
+        PlayGame(paper, rock, spock, scissors, lizard, paperCoversRock, paperDisprovesSpock, scissorsCutsPaper, lizardEatsPaper);
     }
 
     public void OnPressScissors()
     {
-        PlayGame(2, 1, 3, 0, 4, "Scissors cuts Paper", "Scissors decapitates Lizard", "Rock crushes Scissors", "Spock smashes Scissors");
+        PlayGame(scissors, paper, lizard, rock, spock, scissorsCutsPaper, scissorsDecapitatesLizard, rockCrushesScissors, spockSmashesScissors);
     }
 
     public void OnPressLizard()
     {
-        PlayGame(3, 1, 4, 0, 2, "Lizard eats Paper", "Lizard poisons Spock", "Rock crushes Lizard", "Scissors decapitates Lizard");
+        PlayGame(lizard, paper, spock, rock, scissors, lizardEatsPaper, lizardPoisonsSpock, rockCrushesLizard, scissorsDecapitatesLizard);
     }
 
     public void OnPressSpock()
     {
-        PlayGame(4, 0, 2, 1, 3, "Spock vaporizes Rock", "Spock smashes Scissors", "Paper disproves Spock", "Lizard poisons Spock");
+        PlayGame(spock, rock, scissors, paper, lizard, spockVaporizesRock, spockSmashesScissors, paperDisprovesSpock, lizardPoisonsSpock);
     }
 
     public void PlayGame(int whatPicked, int winOne, int winTwo, int loseOne, int loseTwo, string winDescOne, string winDescTwo, string loseDescOne, string loseDescTwo)
@@ -88,7 +105,7 @@ public class Gameplay : MonoBehaviour
         else
         {
             result.text = "Tie!";
-            resultDescription.text = "Play again";
+            resultDescription.text = "Try again";
         }
     }
 
