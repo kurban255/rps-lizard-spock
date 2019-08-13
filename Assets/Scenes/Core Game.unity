@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next round
+  m_Text: Next
 --- !u!222 &49821447
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -231,11 +231,11 @@ RectTransform:
   m_Children:
   - {fileID: 1200389445}
   m_Father: {fileID: 1869728281}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000064318, y: 0.00000047684}
+  m_AnchoredPosition: {x: 0.000064318, y: -49.00002}
   m_SizeDelta: {x: 773.4, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &52868188
@@ -855,11 +855,11 @@ RectTransform:
   m_Children:
   - {fileID: 1469136538}
   m_Father: {fileID: 1869728281}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: -309}
+  m_AnchoredPosition: {x: -0.000022888, y: -358.00003}
   m_SizeDelta: {x: 773.4, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773142369
@@ -1375,6 +1375,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1562959199}
+        m_MethodName: NextButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1869728280}
         m_MethodName: SetActive
         m_Mode: 6
@@ -1610,11 +1621,11 @@ RectTransform:
   m_Children:
   - {fileID: 253088503}
   m_Father: {fileID: 1869728281}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: -151}
+  m_AnchoredPosition: {x: -0.000022888, y: -200.00002}
   m_SizeDelta: {x: 773.4, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166000575
@@ -2067,11 +2078,11 @@ RectTransform:
   m_Children:
   - {fileID: 1029280297}
   m_Father: {fileID: 1869728281}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000045776, y: 150}
+  m_AnchoredPosition: {x: 0.000045776, y: 100.999985}
   m_SizeDelta: {x: 773.4, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283826506
@@ -2259,7 +2270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lives:'
+  m_Text: Lives
 --- !u!222 &1336255337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2267,6 +2278,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336255334}
+  m_CullTransparentMesh: 0
+--- !u!1 &1412003064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1412003065}
+  - component: {fileID: 1412003067}
+  - component: {fileID: 1412003066}
+  m_Layer: 5
+  m_Name: Pick your weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1412003065
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412003064}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1869728281}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 397.34998}
+  m_SizeDelta: {x: 706.4, y: 94.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1412003066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412003064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 80
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Pick your weapon:'
+--- !u!222 &1412003067
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412003064}
   m_CullTransparentMesh: 0
 --- !u!1 &1469136537
 GameObject:
@@ -2379,11 +2469,11 @@ RectTransform:
   m_Children:
   - {fileID: 2033438860}
   m_Father: {fileID: 1869728281}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000045244, y: 296}
+  m_AnchoredPosition: {x: 0.000045244, y: 247}
   m_SizeDelta: {x: 773.4, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490792032
@@ -2666,6 +2756,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1412003065}
   - {fileID: 1490792031}
   - {fileID: 1283826505}
   - {fileID: 52868187}

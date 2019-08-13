@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Gameplay : MonoBehaviour
 {
@@ -121,5 +122,13 @@ public class Gameplay : MonoBehaviour
         resultDescription.text = descriptionText;
         lives--;
         livesText.text = lives.ToString();
+    }
+
+    public void NextButton()
+    {
+        if (lives <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
