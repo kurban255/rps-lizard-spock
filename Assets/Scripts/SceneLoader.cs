@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
 
-    public void NextScene()
+    public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-	public void LastScene()
+	public void LoadFirstScene()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+		SceneManager.LoadScene(1);
 	}
 
-	public void MainMenuScene()
+	public void LoadMenuScene()
 	{
 		SceneManager.LoadScene(0);
 	}

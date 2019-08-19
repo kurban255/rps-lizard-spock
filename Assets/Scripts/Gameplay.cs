@@ -41,10 +41,12 @@ public class Gameplay : MonoBehaviour
     readonly string rockCrushesScissors = "Rock crushes Scissors";
 
     // Cached component references
-
+    SceneLoader sceneloader;
 
     public void Start()
     {
+        sceneloader = FindObjectOfType<SceneLoader>();
+
         lives = startingLives;
         score = 0;
 
@@ -128,7 +130,7 @@ public class Gameplay : MonoBehaviour
     {
         if (lives <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            sceneloader.LoadNextScene();
         }
     }
 }
