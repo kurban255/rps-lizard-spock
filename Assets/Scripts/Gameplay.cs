@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Gameplay : MonoBehaviour
 {
     // Config params
-    [SerializeField] public int scoreIncrement;
+    [SerializeField] public int pointsPerWin;
     [SerializeField] public int startingLives;
     [SerializeField] public Text result;
     [SerializeField] public Text resultDescription;
@@ -19,11 +18,11 @@ public class Gameplay : MonoBehaviour
     [SerializeField] public Image myPickImage;
     [SerializeField] public Image enemyPickImage;
 
-    // State
+    // State variables
     int draw;
     string[] pick = { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
-    int lives;
-    int score;
+    int currentLives;
+    int currentScore;
     readonly int rock = 0;
     readonly int paper = 1;
     readonly int scissors = 2;
@@ -41,17 +40,15 @@ public class Gameplay : MonoBehaviour
     readonly string rockCrushesScissors = "Rock crushes Scissors";
 
     // Cached component references
-    SceneLoader sceneloader;
+    
 
     public void Start()
     {
-        sceneloader = FindObjectOfType<SceneLoader>();
+        currentLives = startingLives;
+        currentScore = 0;
 
-        lives = startingLives;
-        score = 0;
-
-        livesText.text = lives.ToString();
-        scoreText.text = score.ToString();
+        livesText.text = currentLives.ToString();
+        scoreText.text = currentScore.ToString();
     }
 
     public void OnPressRock()
@@ -114,23 +111,23 @@ public class Gameplay : MonoBehaviour
     {
         result.text = "You win!";
         resultDescription.text = descriptionText;
-        score = score + scoreIncrement;
-        scoreText.text = score.ToString();
+        currentScore += pointsPerWin;
+        scoreText.text = currentScore.ToString();
     }
 
     public void YouLose(string descriptionText)
     {
         result.text = "You lose!";
         resultDescription.text = descriptionText;
-        lives--;
-        livesText.text = lives.ToString();
+        currentLives--;
+        livesText.text = currentLives.ToString();
     }
 
     public void NextButton()
     {
-        if (lives <= 0)
+        if (currentLives <= 0)
         {
-            sceneloader.LoadNextScene();
+            FindObjectOfType<SceneLoader>().LoadNextScene();
         }
     }
 }
