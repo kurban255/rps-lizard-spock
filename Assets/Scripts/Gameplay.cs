@@ -14,9 +14,13 @@ public class Gameplay : MonoBehaviour
     [SerializeField] public Text enemyPick;
     [SerializeField] public Text livesText;
     [SerializeField] public Text scoreText;
+    [SerializeField] public Text finalScore;
     [SerializeField] public Sprite[] pickImages;
     [SerializeField] public Image myPickImage;
     [SerializeField] public Image enemyPickImage;
+    [SerializeField] public GameObject stepOneScene;
+    [SerializeField] public GameObject stepTwoScene;
+    [SerializeField] public GameObject endGameScene;
 
     // State variables
     int draw;
@@ -44,6 +48,10 @@ public class Gameplay : MonoBehaviour
 
     public void Start()
     {
+        stepOneScene.SetActive(true);
+        stepTwoScene.SetActive(false);
+        endGameScene.SetActive(false);
+
         currentLives = startingLives;
         currentScore = 0;
 
@@ -127,7 +135,8 @@ public class Gameplay : MonoBehaviour
     {
         if (currentLives <= 0)
         {
-            FindObjectOfType<SceneLoader>().LoadNextScene();
+            finalScore.text = currentScore.ToString();
+            endGameScene.SetActive(true);
         }
     }
 }
