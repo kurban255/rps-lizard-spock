@@ -423,8 +423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -0.000017166}
-  m_SizeDelta: {x: 694.7, y: 647.7}
+  m_AnchoredPosition: {x: -0.000032425, y: 0.000016821}
+  m_SizeDelta: {x: 758, y: 647.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353011775
 MonoBehaviour:
@@ -448,17 +448,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b98ff3f6c97934e66a8313a03c83c55b, type: 3}
-    m_FontSize: 40
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.25
+    m_LineSpacing: 1.4
   m_Text: 'Scissors cuts Paper
 
     Paper covers Rock
@@ -710,7 +710,7 @@ SpriteRenderer:
   m_Size: {x: 4.2, y: 2.76}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &870985326
@@ -2000,8 +2000,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -0.000015258789}
-  m_SizeDelta: {x: 694.7, y: 647.7}
+  m_AnchoredPosition: {x: 0.00002861, y: -0.000015258789}
+  m_SizeDelta: {x: 1022.5, y: 647.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703263118
 MonoBehaviour:
@@ -2025,18 +2025,26 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b98ff3f6c97934e66a8313a03c83c55b, type: 3}
-    m_FontSize: 40
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 0
     m_MaxSize: 60
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.25
-  m_Text: "Game by: \nKarol"
+    m_LineSpacing: 1.4
+  m_Text: 'RPS Lizard Spock is an extension of the popular Rock Paper Scissors game.
+    By adding two new weapons, the chance of a tie is reduced. This extension was
+    originally invented by Sam Kass and Karen Bryl.
+
+
+    Source: http://www.samkass.com/theories/RPSSL.html
+
+
+    A game made by: Karol Urbanski'
 --- !u!222 &1703263119
 CanvasRenderer:
   m_ObjectHideFlags: 0
