@@ -8,22 +8,9 @@ public class Gameplay : MonoBehaviour
     // Config params
     [SerializeField] public int pointsPerWin;
     [SerializeField] public int startingLives;
-    [SerializeField] public Text result;
-    [SerializeField] public Text resultDescription;
-    [SerializeField] public Text myPick;
-    [SerializeField] public Text enemyPick;
-    [SerializeField] public Text livesText;
-    [SerializeField] public Text scoreText;
-    [SerializeField] public Text finalScore;
-    [SerializeField] public Sprite[] pickImages;
-    [SerializeField] public Image myPickImage;
-    [SerializeField] public Image enemyPickImage;
-    [SerializeField] public GameObject stepOneScene;
-    [SerializeField] public GameObject stepTwoScene;
-    [SerializeField] public GameObject endGameScene;
 
     // State variables
-    int draw;
+    int randomDraw;
     string[] pick = { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
     int currentLives;
     int currentScore;
@@ -44,7 +31,21 @@ public class Gameplay : MonoBehaviour
     readonly string rockCrushesScissors = "Rock crushes Scissors";
 
     // Cached component references
-    
+    [SerializeField] public Text result;
+    [SerializeField] public Text resultDescription;
+    [SerializeField] public Text myPick;
+    [SerializeField] public Text enemyPick;
+    [SerializeField] public Text livesText;
+    [SerializeField] public Text scoreText;
+    [SerializeField] public Text finalScore;
+    [SerializeField] public Text nextButton;
+    [SerializeField] public Sprite[] pickImages;
+    [SerializeField] public Image myPickImage;
+    [SerializeField] public Image enemyPickImage;
+    [SerializeField] public GameObject stepOneScene;
+    [SerializeField] public GameObject stepTwoScene;
+    [SerializeField] public GameObject endGameScene;
+    [SerializeField] public GameObject gui;
 
     public void Start()
     {
@@ -88,9 +89,9 @@ public class Gameplay : MonoBehaviour
     {
         myPick.text = pick[whatPicked];
         myPickImage.sprite = pickImages[whatPicked];
-        draw = Random.Range(0, pick.Length);
-        enemyPick.text = pick[draw];
-        enemyPickImage.sprite = pickImages[draw];
+        randomDraw = Random.Range(0, pick.Length);
+        enemyPick.text = pick[randomDraw];
+        enemyPickImage.sprite = pickImages[randomDraw];
 
         if (enemyPick.text == pick[winOne])
         {
@@ -129,6 +130,10 @@ public class Gameplay : MonoBehaviour
         resultDescription.text = descriptionText;
         currentLives--;
         livesText.text = currentLives.ToString();
+        if (currentLives <= 0)
+        {
+            nextButton.text = "End Game";
+        }
     }
 
     public void NextButton()
@@ -136,6 +141,7 @@ public class Gameplay : MonoBehaviour
         if (currentLives <= 0)
         {
             finalScore.text = currentScore.ToString();
+            gui.SetActive(false);
             endGameScene.SetActive(true);
         }
     }
