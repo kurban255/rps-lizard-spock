@@ -794,7 +794,7 @@ PrefabInstance:
     - target: {fileID: 9218472572194495574, guid: 4be363d19ddd443208bd3e33aa621801,
         type: 3}
       propertyPath: m_Name
-      value: Mute button
+      value: Mute Button
       objectReference: {fileID: 0}
     - target: {fileID: 2464854777779720752, guid: 4be363d19ddd443208bd3e33aa621801,
         type: 3}
@@ -900,21 +900,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2464854777779720752, guid: 4be363d19ddd443208bd3e33aa621801,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2464854777779720752, guid: 4be363d19ddd443208bd3e33aa621801,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2464854777779720752, guid: 4be363d19ddd443208bd3e33aa621801,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4be363d19ddd443208bd3e33aa621801, type: 3}

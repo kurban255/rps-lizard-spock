@@ -2747,7 +2747,7 @@ PrefabInstance:
     - target: {fileID: 9218472572194495574, guid: 4be363d19ddd443208bd3e33aa621801,
         type: 3}
       propertyPath: m_Name
-      value: Mute
+      value: Mute Button
       objectReference: {fileID: 0}
     - target: {fileID: 2464854777779720752, guid: 4be363d19ddd443208bd3e33aa621801,
         type: 3}
