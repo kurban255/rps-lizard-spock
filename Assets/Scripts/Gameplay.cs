@@ -10,8 +10,7 @@ public class Gameplay : MonoBehaviour
     [SerializeField] public int startingLives;
 
     // State variables
-    int randomDraw;
-    string[] pick = { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+    int randomDrawForEnemy;
     int currentLives;
     int currentScore;
     readonly int rock = 0;
@@ -33,19 +32,17 @@ public class Gameplay : MonoBehaviour
     // Cached component references
     [SerializeField] public Text result;
     [SerializeField] public Text resultDescription;
-    [SerializeField] public Text myPick;
-    [SerializeField] public Text enemyPick;
     [SerializeField] public Text livesText;
     [SerializeField] public Text scoreText;
     [SerializeField] public Text finalScore;
-    [SerializeField] public Text nextButton;
+    [SerializeField] public Text nextButtonText;
     [SerializeField] public Sprite[] pickImages;
     [SerializeField] public Image myPickImage;
     [SerializeField] public Image enemyPickImage;
     [SerializeField] public GameObject stepOneScene;
     [SerializeField] public GameObject stepTwoScene;
     [SerializeField] public GameObject endGameScene;
-    [SerializeField] public GameObject gui;
+    [SerializeField] public GameObject gUI;
 
     public void Start()
     {
@@ -87,25 +84,23 @@ public class Gameplay : MonoBehaviour
 
     public void PlayGame(int whatPicked, int winOne, int winTwo, int loseOne, int loseTwo, string winDescOne, string winDescTwo, string loseDescOne, string loseDescTwo)
     {
-        myPick.text = pick[whatPicked];
         myPickImage.sprite = pickImages[whatPicked];
-        randomDraw = Random.Range(0, pick.Length);
-        enemyPick.text = pick[randomDraw];
-        enemyPickImage.sprite = pickImages[randomDraw];
+        randomDrawForEnemy = Random.Range(0, pickImages.Length);
+        enemyPickImage.sprite = pickImages[randomDrawForEnemy];
 
-        if (enemyPick.text == pick[winOne])
+        if (randomDrawForEnemy == winOne)
         {
             YouWin(winDescOne);
         }
-        else if (enemyPick.text == pick[winTwo])
+        else if (randomDrawForEnemy == winTwo)
         {
             YouWin(winDescTwo);
         }
-        else if (enemyPick.text == pick[loseOne])
+        else if (randomDrawForEnemy == loseOne)
         {
             YouLose(loseDescOne);
         }
-        else if (enemyPick.text == pick[loseTwo])
+        else if (randomDrawForEnemy == loseTwo)
         {
             YouLose(loseDescTwo);
         }
@@ -132,7 +127,7 @@ public class Gameplay : MonoBehaviour
         livesText.text = currentLives.ToString();
         if (currentLives <= 0)
         {
-            nextButton.text = "End Game";
+            nextButtonText.text = "End Game";
         }
     }
 
@@ -141,7 +136,7 @@ public class Gameplay : MonoBehaviour
         if (currentLives <= 0)
         {
             finalScore.text = currentScore.ToString();
-            gui.SetActive(false);
+            gUI.SetActive(false);
             endGameScene.SetActive(true);
         }
     }
