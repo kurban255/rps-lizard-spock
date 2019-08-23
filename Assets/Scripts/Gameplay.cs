@@ -107,7 +107,9 @@ public class Gameplay : MonoBehaviour
         else
         {
             result.text = "Tie!";
-            resultDescription.text = "Try again";
+            resultDescription.text = "You gain +1 life";
+            currentLives++;
+            livesText.text = currentLives.ToString();
         }
     }
 
