@@ -43,6 +43,7 @@ public class Gameplay : MonoBehaviour
     [SerializeField] public GameObject stepTwoScene;
     [SerializeField] public GameObject endGameScene;
     [SerializeField] public GameObject gUI;
+    public Animator myAnimator;
 
     public void Start()
     {
