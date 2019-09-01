@@ -2669,6 +2669,7 @@ GameObject:
   - component: {fileID: 1280166068}
   - component: {fileID: 1280166067}
   - component: {fileID: 1280166069}
+  - component: {fileID: 1280166070}
   m_Layer: 5
   m_Name: Scene
   m_TagString: Untagged
@@ -2757,6 +2758,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1280166070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280166065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f2f6476153a4d36b74fa853513a30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameplay: {fileID: 1562959199}
 --- !u!1 &1283826504
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,6 +3459,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerWin: 50
   startingLives: 3
+  currentLives: 0
+  currentScore: 0
   result: {fileID: 1839339355}
   resultDescription: {fileID: 1269061601}
   livesText: {fileID: 899967427}
@@ -3463,7 +3479,6 @@ MonoBehaviour:
   stepTwoScene: {fileID: 1270449476}
   endGameScene: {fileID: 176685353}
   gUI: {fileID: 1301819904}
-  myAnimator: {fileID: 1280166069}
 --- !u!4 &1562959200
 Transform:
   m_ObjectHideFlags: 0

@@ -11,8 +11,8 @@ public class Gameplay : MonoBehaviour
 
     // State variables
     int randomDrawForEnemy;
-    int currentLives;
-    int currentScore;
+    public int currentLives;
+    public int currentScore;
     readonly int rock = 0;
     readonly int paper = 1;
     readonly int scissors = 2;
@@ -43,7 +43,6 @@ public class Gameplay : MonoBehaviour
     [SerializeField] public GameObject stepTwoScene;
     [SerializeField] public GameObject endGameScene;
     [SerializeField] public GameObject gUI;
-    public Animator myAnimator;
 
     public void Start()
     {
@@ -110,7 +109,6 @@ public class Gameplay : MonoBehaviour
             result.text = "Tie!";
             resultDescription.text = "You gain +1 life";
             currentLives++;
-            livesText.text = currentLives.ToString();
         }
     }
 
@@ -119,7 +117,6 @@ public class Gameplay : MonoBehaviour
         result.text = "You win!";
         resultDescription.text = descriptionText;
         currentScore += pointsPerWin;
-        scoreText.text = currentScore.ToString();
     }
 
     public void YouLose(string descriptionText)
@@ -127,7 +124,6 @@ public class Gameplay : MonoBehaviour
         result.text = "You lose!";
         resultDescription.text = descriptionText;
         currentLives--;
-        livesText.text = currentLives.ToString();
         if (currentLives <= 0)
         {
             nextButtonText.text = "End Game";
