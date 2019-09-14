@@ -43,6 +43,11 @@ public class Gameplay : MonoBehaviour
     [SerializeField] public GameObject stepTwoScene;
     [SerializeField] public GameObject endGameScene;
     [SerializeField] public GameObject gUI;
+    [SerializeField] public AudioSource resultSound;
+    [SerializeField] public AudioClip winSound;
+    [SerializeField] public AudioClip loseSound;
+    [SerializeField] public AudioClip tieSound;
+    [SerializeField] public AudioSource backgroundMusic;
 
     public void Start()
     {
@@ -109,6 +114,7 @@ public class Gameplay : MonoBehaviour
             result.text = "Tie!";
             resultDescription.text = "You gain +1 life";
             currentLives++;
+            resultSound.clip = tieSound;
         }
     }
 
@@ -117,6 +123,7 @@ public class Gameplay : MonoBehaviour
         result.text = "You win!";
         resultDescription.text = descriptionText;
         currentScore += pointsPerWin;
+        resultSound.clip = winSound;
     }
 
     public void YouLose(string descriptionText)
@@ -124,6 +131,7 @@ public class Gameplay : MonoBehaviour
         result.text = "You lose!";
         resultDescription.text = descriptionText;
         currentLives--;
+        resultSound.clip = loseSound;
         if (currentLives <= 0)
         {
             nextButtonText.text = "End Game";
@@ -137,6 +145,7 @@ public class Gameplay : MonoBehaviour
             finalScore.text = currentScore.ToString();
             gUI.SetActive(false);
             endGameScene.SetActive(true);
+            backgroundMusic.Stop();
         }
     }
 }
