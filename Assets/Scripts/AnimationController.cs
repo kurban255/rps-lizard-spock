@@ -15,4 +15,9 @@ public class AnimationController : MonoBehaviour
         rollAudio.Stop();
         audienceAudio.Play();
     }
+
+    //public void RollSound()
+    //{
+    //    rollAudio.Play();
+    //}
 }
