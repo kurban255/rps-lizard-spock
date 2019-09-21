@@ -12,12 +12,11 @@ public class AnimationController : MonoBehaviour
     {
         gameplay.livesText.text = gameplay.currentLives.ToString();
         gameplay.scoreText.text = gameplay.currentScore.ToString();
-        rollAudio.Stop();
         audienceAudio.Play();
     }
 
-    //public void RollSound()
-    //{
-    //    rollAudio.Play();
-    //}
+    public void RollSound()
+    {
+        rollAudio.Play();
+    }
 }

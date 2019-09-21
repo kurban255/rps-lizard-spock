@@ -48,6 +48,7 @@ public class Gameplay : MonoBehaviour
     [SerializeField] public AudioClip loseSound;
     [SerializeField] public AudioClip tieSound;
     [SerializeField] public AudioSource backgroundMusic;
+    [SerializeField] public AudioSource endSound;
 
     public void Start()
     {
@@ -146,6 +147,7 @@ public class Gameplay : MonoBehaviour
             gUI.SetActive(false);
             endGameScene.SetActive(true);
             backgroundMusic.Stop();
+            endSound.Play();
         }
     }
 }
