@@ -1051,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 8353179178327818186, guid: 845dd18e7e6dd4de9803eaf477bde93a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8353179178327818186, guid: 845dd18e7e6dd4de9803eaf477bde93a,
         type: 3}
@@ -1454,7 +1454,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1c6da7210625142a5bb02b05361b464b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36cfdf6607df644ac82d6227d3f61ef0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2490,7 +2490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1124864782
 GameObject:
@@ -3100,7 +3100,7 @@ RectTransform:
   - {fileID: 2029629625593467923}
   - {fileID: 934107243}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3942,7 +3942,7 @@ MonoBehaviour:
   finalScore: {fileID: 868936772}
   nextButtonText: {fileID: 49821446}
   pickImages:
-  - {fileID: 21300000, guid: 1c6da7210625142a5bb02b05361b464b, type: 3}
+  - {fileID: 21300000, guid: 7d2e24e69915443fea0cd1560f4ec8e6, type: 3}
   - {fileID: 21300000, guid: 16f45905c739244dd8888e490ab0ce8f, type: 3}
   - {fileID: 21300000, guid: 9743e7c404ce247509e19503a1536b56, type: 3}
   - {fileID: 21300000, guid: ff42c844b853d4b9892f359e3fff7de9, type: 3}
@@ -3971,7 +3971,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603569210
 GameObject:
@@ -5090,7 +5090,7 @@ Transform:
   - {fileID: 564230559}
   - {fileID: 951095997}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &940671025276083595
 MonoBehaviour:
