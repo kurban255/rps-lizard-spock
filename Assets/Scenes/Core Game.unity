@@ -714,7 +714,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 320, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
@@ -1454,7 +1454,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 36cfdf6607df644ac82d6227d3f61ef0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b50e76205239845f899b83e44ed1dafd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3942,7 +3942,7 @@ MonoBehaviour:
   finalScore: {fileID: 868936772}
   nextButtonText: {fileID: 49821446}
   pickImages:
-  - {fileID: 21300000, guid: 7d2e24e69915443fea0cd1560f4ec8e6, type: 3}
+  - {fileID: 21300000, guid: ebfbf2f2023af458092f92811a7c419b, type: 3}
   - {fileID: 21300000, guid: 16f45905c739244dd8888e490ab0ce8f, type: 3}
   - {fileID: 21300000, guid: 9743e7c404ce247509e19503a1536b56, type: 3}
   - {fileID: 21300000, guid: ff42c844b853d4b9892f359e3fff7de9, type: 3}
